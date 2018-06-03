@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# you should write CUDA_VISIBLE_DEVICES=0 python test.py if want run with CPU
 from __future__ import print_function
 import keras
 from keras.datasets import mnist
