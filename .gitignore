@@ -4,3 +4,4 @@
 *.gz
 MNIST_data
 venv
+__pycache__
