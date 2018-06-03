@@ -77,3 +77,5 @@ if __name__ == '__main__':
     # t3 = datetime.datetime.now()
 
     # print(t3 - t2)
+
+    # https://github.com/tensorflow/models/blob/master/official/mnist/mnist_tpu.py TPU example
