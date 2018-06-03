@@ -1,2 +1,6 @@
 *.out
 *.class
+
+*.gz
+MNIST_data
+venv
