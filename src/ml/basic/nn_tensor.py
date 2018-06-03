@@ -60,7 +60,20 @@ def train_neural_network(X, Y):
         accuracy = tf.reduce_mean(tf.cast(correct,'float'))
         print('accuracy: ', accuracy.eval({X:mnist.test.images, Y:mnist.test.labels}))
 
-t1 = datetime.datetime.now()
-train_neural_network(X,Y)
-t2 = datetime.datetime.now()
-print(datetime.timedelta(t1, t2))
+
+if __name__ == '__main__':
+    t1 = datetime.datetime.now()
+    # with tf.device(assign_to_device('/cpu:0')):
+    with tf.device('/cpu:0'):
+      train_neural_network(X,Y)
+    t2 = datetime.datetime.now()
+
+    print(t2 - t1)
+
+    # with tf.device(assign_to_device('/gpu:0', ps_device='/cpu:0')):
+    # with tf.device(assign_to_device('/gpu:0')):
+    # with tf.device('/gpu:0'):
+    #   train_neural_network(X,Y)
+    # t3 = datetime.datetime.now()
+
+    # print(t3 - t2)
